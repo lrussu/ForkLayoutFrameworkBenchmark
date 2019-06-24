@@ -25,6 +25,9 @@
 		24661D071F4EFFF5002CB883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24661D061F4EFFF5002CB883 /* Assets.xcassets */; };
 		24661D0A1F4EFFF5002CB883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24661D081F4EFFF5002CB883 /* LaunchScreen.storyboard */; };
 		639E5A2020DF62D700C6BCEA /* NKFrameLayoutKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E5A1F20DF62D700C6BCEA /* NKFrameLayoutKitView.swift */; };
+		79964FBC22B981430063C94F /* FeedItemSnapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964FBB22B981430063C94F /* FeedItemSnapKitView.swift */; };
+		79964FBF22BA56910063C94F /* FeedItemPureLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964FBE22BA56910063C94F /* FeedItemPureLayoutView.swift */; };
+		79964FC222BA57800063C94F /* FeedItemCartographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964FC122BA57800063C94F /* FeedItemCartographyView.swift */; };
 		BF3DC69820B560A400536177 /* FeedItemNotAutoLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3DC69720B560A400536177 /* FeedItemNotAutoLayoutView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		4F34489CA12B845548D7F17E /* Pods_LayoutFrameworkBenchmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutFrameworkBenchmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639E5A1F20DF62D700C6BCEA /* NKFrameLayoutKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKFrameLayoutKitView.swift; sourceTree = "<group>"; };
 		73BD901DE3512A23A7603899 /* Pods-LayoutFrameworkBenchmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutFrameworkBenchmark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayoutFrameworkBenchmark/Pods-LayoutFrameworkBenchmark.debug.xcconfig"; sourceTree = "<group>"; };
+		79964FBB22B981430063C94F /* FeedItemSnapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemSnapKitView.swift; sourceTree = "<group>"; };
+		79964FBE22BA56910063C94F /* FeedItemPureLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemPureLayoutView.swift; sourceTree = "<group>"; };
+		79964FC122BA57800063C94F /* FeedItemCartographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCartographyView.swift; sourceTree = "<group>"; };
 		BF3DC69720B560A400536177 /* FeedItemNotAutoLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemNotAutoLayoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,9 @@
 				2401BC911F4F020600788998 /* PinLayout */,
 				2401BC9F1F4F043800788998 /* UIStackView */,
 				639E5A1E20DF620D00C6BCEA /* NKFrameLayoutKit */,
+				79964FBD22B985EE0063C94F /* SnapKit */,
+				79964FC022BA56D40063C94F /* PureLayout */,
+				79964FC322BA57A20063C94F /* Cartography */,
 				2401BC751F4F018C00788998 /* BenchmarkViewController.swift */,
 				2401BC761F4F018C00788998 /* CollectionViewController.swift */,
 				2401BC771F4F018C00788998 /* DataBinder.swift */,
@@ -192,6 +201,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		79964FBD22B985EE0063C94F /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				79964FBB22B981430063C94F /* FeedItemSnapKitView.swift */,
+			);
+			name = SnapKit;
+			sourceTree = "<group>";
+		};
+		79964FC022BA56D40063C94F /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				79964FBE22BA56910063C94F /* FeedItemPureLayoutView.swift */,
+			);
+			name = PureLayout;
+			sourceTree = "<group>";
+		};
+		79964FC322BA57A20063C94F /* Cartography */ = {
+			isa = PBXGroup;
+			children = (
+				79964FC122BA57800063C94F /* FeedItemCartographyView.swift */,
+			);
+			name = Cartography;
+			sourceTree = "<group>";
+		};
 		8056A3D1484FA641948E8180 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +274,7 @@
 				TargetAttributes = {
 					24661CFB1F4EFFF5002CB883 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = ZYH5WDPX24;
+						DevelopmentTeam = 6P962YZB5U;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -252,6 +285,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -285,21 +319,25 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LayoutFrameworkBenchmark/Pods-LayoutFrameworkBenchmark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexLayout/FlexLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/LayoutKit/LayoutKit.framework",
 				"${BUILT_PRODUCTS_DIR}/NKFrameLayoutKit/NKFrameLayoutKit.framework",
 				"${BUILT_PRODUCTS_DIR}/NotAutoLayout/NotAutoLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-19/iOS/RevealServer.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayoutKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NKFrameLayoutKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotAutoLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,6 +374,8 @@
 				2401BC8F1F4F01D600788998 /* FeedItemLayoutKitView.swift in Sources */,
 				2401BC851F4F018C00788998 /* FeedItemData.swift in Sources */,
 				2401BC831F4F018C00788998 /* DataBinder.swift in Sources */,
+				79964FC222BA57800063C94F /* FeedItemCartographyView.swift in Sources */,
+				79964FBF22BA56910063C94F /* FeedItemPureLayoutView.swift in Sources */,
 				2401BC961F4F022900788998 /* FeedItemPinLayoutView.swift in Sources */,
 				2401BC821F4F018C00788998 /* CollectionViewController.swift in Sources */,
 				2401BC9E1F4F042700788998 /* FeedItemManualView.swift in Sources */,
@@ -346,6 +386,7 @@
 				2401BC941F4F021F00788998 /* FeedItemFlexLayoutView.swift in Sources */,
 				2401BCA41F4F045F00788998 /* FeedItemAutoLayoutView.swift in Sources */,
 				24661D001F4EFFF5002CB883 /* AppDelegate.swift in Sources */,
+				79964FBC22B981430063C94F /* FeedItemSnapKitView.swift in Sources */,
 				2401BC991F4F029900788998 /* FeedItemLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,11 +521,14 @@
 			baseConfigurationReference = 73BD901DE3512A23A7603899 /* Pods-LayoutFrameworkBenchmark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZYH5WDPX24;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P962YZB5U;
 				INFOPLIST_FILE = LayoutFrameworkBenchmark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.test.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = endava.mobile.benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -496,11 +540,14 @@
 			baseConfigurationReference = 1A3C4D1FF88A9395CE622CF2 /* Pods-LayoutFrameworkBenchmark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZYH5WDPX24;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P962YZB5U;
 				INFOPLIST_FILE = LayoutFrameworkBenchmark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mirego.test.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = endava.mobile.benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;

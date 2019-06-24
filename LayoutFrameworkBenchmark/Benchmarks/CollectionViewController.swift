@@ -19,6 +19,11 @@ import UIKit
 /// of method sizzling would not work and bring into infinite loop if different view type
 /// uses `CollectionViewController` directly.
 ///
+
+class CollectionViewControllerFeedItemSnapKitView: CollectionViewController<FeedItemSnapKitView> {}
+class CollectionViewControllerFeedItemPureLayoutView: CollectionViewController<FeedItemPureLayoutView> {}
+class CollectionViewControllerFeedItemCartographyView: CollectionViewController<FeedItemCartographyView> {}
+
 @available(iOS 9, *)
 class CollectionViewControllerFeedItemUIStackView: CollectionViewController<FeedItemUIStackView> {}
 
